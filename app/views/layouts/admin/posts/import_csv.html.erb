@@ -1,0 +1,9 @@
+<!-- app/views/admin/posts/import_csv.html.erb -->
+<div class="container">
+  <%= form_tag process_csv_admin_posts_path, multipart: true do %>
+    <div class="field">
+      <%= file_field_tag :file, accept: '.csv' %>
+    </div>
+    <%= submit_tag 'Import CSV' %>
+  <% end %>
+</div>
